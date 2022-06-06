@@ -92,9 +92,9 @@ def run():
     old = []
     for i in adults:
         if i['age'] >= 50:
-            old.append({i['name']:True})
+            old.append({i['name']:{'old':True}})
         else:
-            old.append({i['name']:False})
+            old.append({i['name']:{'old':False}})
     print(old)
 
 if __name__ == '__main__':
