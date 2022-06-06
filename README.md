@@ -1,0 +1,3 @@
+Es un proyecto en donde se creara un programa que, basados en
+un lista de trabajadores con sus respectivos datos, nos ayudara a filtrar los datos especificos que nosotros estemos buscando, utilizando funciones de orden superior, funciones 
+anonimas, list y dic comprehension, y muchas mas tecnicas...
