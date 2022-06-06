@@ -74,28 +74,32 @@ DATA = [
     
 
 def run():
-    #Imprimir solo los nombres de las personas que sepan Python usando list comprehension
-    all_people_python = [python['name'] for python in DATA if python['language'] == 'python']
-    print(f'Saben python --> {all_people_python}')
-    
-    #Imprimir las personas que trabajen en platzi
-    all_people_platzi = [platzi['name'] for platzi in DATA if platzi['organization'] == 'Platzi']
-    print(f'Trabajan en Platzi --> {all_people_platzi}')
-
-    #Imprimir las personas mayores de edad usando funciones de orden superior (filter)
-    adults = list(filter(lambda worker: worker['age'] >= 18, DATA))
-    mayores = list(map(lambda name: name['name'], adults))
-    print(f'Mayores de edad --> {mayores}')
+    #Imprimir solo los nombres de las personas que sepan Python usando (filter y map)
+    all_python = list(filter(lambda python: python['language'] == 'python', DATA))
+    names = list(map(lambda name: name['name'], all_python))
+    # print(f'Saben python --> {names}')
     print()
 
-    #Que se imprima True si la persona es mayor a 50 años y False si no lo es 
-    old = []
-    for i in adults:
+    #Imprimir las personas que trabajen en platzi usando (filter y map)
+    all_platzi = list(filter(lambda work: work['organization'] == 'Platzi', DATA))
+    names_work = list(map(lambda name: name['name'], all_platzi))
+    # print(f'Trabajan en Platzi --> {names_work}')
+    print()
+
+    #Imprimir las personas mayores de edad usando list comprehension
+    all_adults = [mayor['name'] for mayor in DATA if mayor['age'] >= 18]
+    # print(f'Mayores de edad --> {all_adults}')
+    print()
+
+    #True si la persona es mayor a 50 años y False si no lo es; hecho con list comprehension
+    old = {}
+    for i in DATA:
         if i['age'] >= 50:
-            old.append({i['name']:{'old':True}})
+            old[i['name']] = True
         else:
-            old.append({i['name']:{'old':False}})
+            old[i['name']] = False
     print(old)
+
 
 if __name__ == '__main__':
     print()
