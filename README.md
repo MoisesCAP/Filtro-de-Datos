@@ -1,3 +1,7 @@
-Es un proyecto en donde se creara un programa que, basados en
-un lista de trabajadores con sus respectivos datos, nos ayudara a filtrar los datos especificos que nosotros estemos buscando, utilizando funciones de orden superior, funciones 
-anonimas, list y dic comprehension, y muchas mas tecnicas...
+Es un programa que basado en un lista de trabajadores con su respectiva información, 
+nos ayudará a filtrar los datos específicos que nosotros estemos buscando, 
+utilizando funciones de orden superior, funciones anónimas (lambdas), list y dic comprehension, 
+y muchas más técnicas...
+
+NOTA: Debes ajustar los "print" para visualizar otro tipo de información, ya que algunos están
+comentados para no sobrecargar la pantalla de datos 

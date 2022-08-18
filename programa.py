@@ -1,3 +1,4 @@
+#Python 3.10
 
 DATA = [
     {
@@ -91,7 +92,7 @@ def run():
     # print(f'Mayores de edad --> {all_adults}')
     print()
 
-    #True si la persona es mayor a 50 años y False si no lo es; hecho con list comprehension
+    #True si la persona es mayor a 50 años y False si no lo es
     old = {}
     for i in DATA:
         if i['age'] >= 50:
@@ -103,6 +104,8 @@ def run():
 
 if __name__ == '__main__':
     print()
+
+    # Para imprimir los nombres al inicio
     print('LISTA DE PERSONAS: ')
     for i in DATA:
         print('- ',i['name'])
