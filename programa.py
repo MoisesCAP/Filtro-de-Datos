@@ -1,4 +1,6 @@
-#Python 3.10
+# Python 3.10
+# Repositorio en SSH: git@github.com:MoisesCAP/Filtro_de_datos.git
+# Repo. en HTTPS: https://github.com/MoisesCAP/Filtro_de_datos.git
 
 DATA = [
     {
@@ -16,7 +18,7 @@ DATA = [
         'language': 'javascript',
     },
     {
-        'name': 'Héctor',
+        'name': 'Hector',
         'age': 19,
         'organization': 'Platzi',
         'position': 'Associate',
@@ -72,8 +74,9 @@ DATA = [
         'language': 'python',
     },
     ]
-    
 
+
+# Algunos ejemplos de datos filtrados 
 def run():
     #Imprimir solo los nombres de las personas que sepan Python usando (filter y map)
     all_python = list(filter(lambda python: python['language'] == 'python', DATA))
@@ -92,23 +95,13 @@ def run():
     # print(f'Mayores de edad --> {all_adults}')
     print()
 
-    #True si la persona es mayor a 50 años y False si no lo es
-    old = {}
-    for i in DATA:
-        if i['age'] >= 50:
-            old[i['name']] = True
-        else:
-            old[i['name']] = False
-    print(old)
 
-
+# INICIO
 if __name__ == '__main__':
     print()
-
-    # Para imprimir los nombres al inicio
     print('LISTA DE PERSONAS: ')
     for i in DATA:
-        print('- ',i['name'])
+        print('-',i['name'])
     print()
     
     run()
